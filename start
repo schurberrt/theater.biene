@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Theater Workshops</title>
+</head>
+<body>
+
+    <h1>Willkommen bei meinen Theaterkursen 🎭</h1>
+
+    <p>Hier findest du Infos zu Improtheater, Clownerie und Kindertheater.</p>
+
+    <h2>Workshops</h2>
+    <ul>
+        <li>Improtheater</li>
+        <li>Clownerie</li>
+        <li>Kindertheater</li>
+    </ul>
+
+    <h2>Kontakt</h2>
+    <p>Email: kontakt@theater.de</p>
+
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #797ab0;
+        padding: 20px;
+    }
+
+    h1 {
+        color: darkred;
+    }
+</style>
+<h1>Improtheater Workshop</h1>
+
+<p>
+Lerne spontan zu spielen, kreativ zu sein und Spaß auf der Bühne zu haben!
+</p>
+
+<p><strong>Für:</strong> Anfänger & Fortgeschrittene</p>
+<p><strong>Dauer:</strong> 2 Stunden</p>
+<form>
