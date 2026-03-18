@@ -76,7 +76,7 @@
         <button type="submit">Absenden</button>
     </form>
 
-    <?php
+<?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = htmlspecialchars($_POST['name']);
         $email = htmlspecialchars($_POST['email']);
@@ -84,4 +84,5 @@
         $zeitpunkt = date("Y-m-d H:i:s");
         $eintrag = "[$zeitpunkt] Name: $name, E-Mail: $email, Feedback: $text" . PHP_EOL;
         file_put_contents("feedback.txt", $eintrag, FILE_APPEND);
-        echo "<p>Vielen Dank! Deine Rückmeldung wu
+        echo "<p>Vielen Dank! Deine Rückmeldung
+<?php
