@@ -1,44 +1,87 @@
+@@ -1,2 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <title>Theater Workshops</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #797ab0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: darkred;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info-box1 {
+            background-color: #00008B;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+            width: 75%;
+            align-items: left;        }
+
+        .info-box2 {
+            background-color: #00008B;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+            width: 75%;
+            align-items: left;
+        }
+    </style>
 </head>
 <body>
-
     <h1>Willkommen bei meinen Theaterkursen 🎭</h1>
 
-    <p>Hier findest du Infos zu Improtheater, Clownerie und Kindertheater.</p>
+    <div class="info-box1">
+        <p>Hier findest du Infos zu Improtheater, Clownerie und Kindertheater.</p>
 
-    <h2>Workshops</h2>
-    <ul>
-        <li>Improtheater</li>
-        <li>Clownerie</li>
-        <li>Kindertheater</li>
-    </ul>
+        <h2>Workshops</h2>
+        <ul>
+            <li>Improtheater</li>
+            <li>Clownerie</li>
+            <li>Kindertheater</li>
+        </ul>
 
-    <h2>Kontakt</h2>
-    <p>Email: kontakt@theater.de</p>
+        <h2>Kontakt</h2>
+        <p>Email: kontakt@theater.de</p>
+    </div>
 
-</body>
-</html>
-<style>
-    body {
-        font-family: Arial;
-        background-color: #797ab0;
-        padding: 20px;
-    }
+    <h1>Improtheater Workshop</h1>
 
-    h1 {
-        color: darkred;
-    }
-</style>
-<h1>Improtheater Workshop</h1>
+    <div class="info-box2">
+        <p>Lerne spontan zu spielen, kreativ zu sein und Spaß auf der Bühne zu haben!</p>
 
-<p>
-Lerne spontan zu spielen, kreativ zu sein und Spaß auf der Bühne zu haben!
-</p>
+        <p><strong>Für:</strong> Anfänger & Fortgeschrittene</p>
+        <p><strong>Dauer:</strong> 2 Stunden</p>
+    </div>
 
-<p><strong>Für:</strong> Anfänger & Fortgeschrittene</p>
-<p><strong>Dauer:</strong> 2 Stunden</p>
-<form>
+    <h3>Feedback-Formular</h3>
+    <form action="" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Absenden</button>
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $text = htmlspecialchars($_POST['nutzer_feedback']);
+        $zeitpunkt = date("Y-m-d H:i:s");
+        $eintrag = "[$zeitpunkt] Name: $name, E-Mail: $email, Feedback: $text" . PHP_EOL;
+        file_put_contents("feedback.txt", $eintrag, FILE_APPEND);
+        echo "<p>Vielen Dank! Deine Rückmeldung wu
