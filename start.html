@@ -1,88 +1,162 @@
-@@ -1,2 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <title>Theater Workshops</title>
     <style>
-        body {
-            font-family: Arial;
-            background-color: #797ab0;
-            padding: 20px;
-        }
-
-        h1 {
+                h1 {
             color: darkred;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-
-        .info-box1 {
-            background-color: #00008B;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #797ab0;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: white;
-            width: 75%;
-            align-items: left;        }
-
-        .info-box2 {
-            background-color: #00008B;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: white;
-            width: 75%;
-            align-items: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
+        .main-content-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 1400px;
+            margin: 20px auto;
+        }
+        .workshops-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 40px auto 20px auto;
+        }
+
+        .workshop-column {
+            flex: 1;
+            min-width: 250px;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .workshop-header {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .info-box-main {
+            background-color: #00008B;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            color: white;
+            text-decoration: none;
+            min-height: 150px;
+            display: block;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .info-box-main:hover {
+            background-color: #0000cd;
+        }
+
+        /* Gemeinsame Button-Zeile ganz unten */
+        .bottom-button-row {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn-grey {
+            padding: 15px 30px;
+            background-color: #8da399;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            transition: 0.3s;
+            font-size: 16px;
+            min-width: 150px;
+        }
+
+        .btn-grey:hover {
+            background-color: #6d7f76;
+        }
+            footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+        .workshops-wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        .workshop-column {
+            width: 90%;
+            max-width: none;
+        }
+        .bottom-button-row {
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn-grey {
+            width: 90%;
+        }
+    }
     </style>
 </head>
 <body>
     <h1>Willkommen bei meinen Theaterkursen 🎭</h1>
+    <div class="main-content-box">
+        <div class="workshops-wrapper">
+            <div class="workshop-column">
+                <a href="link1.html" class="info-box-main">TheaterGetöse</a>
+            </div>
+            <div class="workshop-column">
+                <a href="link2.html" class="info-box-main">Improtheater</a>
+            </div>
+            <div class="workshop-column">
+                <a href="link3.html" class="info-box-main">ClownsGedönse</a>
+            </div>
+            <div class="workshop-column">
+                <a href="link4.html" class="info-box-main">Kindertheater</a>
+            </div>
+        </div>
 
-    <div class="info-box1">
-        <p>Hier findest du Infos zu Improtheater, Clownerie und Kindertheater.</p>
-
-        <h2>Workshops</h2>
-        <ul>
-            <li>Improtheater</li>
-            <li>Clownerie</li>
-            <li>Kindertheater</li>
-        </ul>
-
-        <h2>Kontakt</h2>
-        <p>Email: kontakt@theater.de</p>
+        <!-- Nur zwei graue Buttons darunter -->
+        <div class="bottom-button-row">
+            <a href="allgemeine-details.html" class="btn-grey">Alle Details</a>
+            <a href="kontakt.html" class="btn-grey">Jetzt Kontaktieren</a>
+        </div>
     </div>
+    <footer>
+    <p>&copy; 2024 Dein Name | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
 
-    <h1>Improtheater Workshop</h1>
-
-    <div class="info-box2">
-        <p>Lerne spontan zu spielen, kreativ zu sein und Spaß auf der Bühne zu haben!</p>
-
-        <p><strong>Für:</strong> Anfänger & Fortgeschrittene</p>
-        <p><strong>Dauer:</strong> 2 Stunden</p>
-    </div>
-
-    <h3>Feedback-Formular</h3>
-    <form action="" method="POST">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">E-Mail:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <button type="submit">Absenden</button>
-    </form>
-
-<?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = htmlspecialchars($_POST['name']);
-        $email = htmlspecialchars($_POST['email']);
-        $text = htmlspecialchars($_POST['nutzer_feedback']);
-        $zeitpunkt = date("Y-m-d H:i:s");
-        $eintrag = "[$zeitpunkt] Name: $name, E-Mail: $email, Feedback: $text" . PHP_EOL;
-        file_put_contents("feedback.txt", $eintrag, FILE_APPEND);
-        echo "<p>Vielen Dank! Deine Rückmeldung
-<?php
+</body>
+</html>
