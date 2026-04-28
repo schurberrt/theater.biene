@@ -4,16 +4,41 @@
     <meta charset="UTF-8">
     <title>Theater Workshops</title>
     <style>
-                h1 {
-            color: darkred;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+                        :root {
+            --color-bg:        #0f0f1a;
+            --color-text:      #f0f0ff;
+            --color-accent:    #e94560;
+            --color-card:      #1a1a2e;
+            --radius:          16px;
         }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            min-height: 100vh;
+            padding: 4rem 1rem 5rem;
+            text-align: center;
+        }
+          header {
+            margin-bottom: 6rem;
+        }
+        h1{
+            font-size: clamp(3.2rem, 11vw, 7rem);
+            color: var(--color-accent);
+            margin-bottom: 0.8rem;
+            text-shadow: 0 4px 15px rgba(233,69,96,0.3);
+          
     </style>
 </head>
 <body>
-    <h1>Willkommen bei meinen Theaterkursen 🎭</h1>
+    <header>
+        <h1>Clownsgedönse</h1>
+    </header>
+    
 </body>
 </html>
