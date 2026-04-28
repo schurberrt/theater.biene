@@ -4,35 +4,48 @@
     <meta charset="UTF-8">
     <title>Theater Workshops</title>
     <style>
-        h1 {
-            color: darkred;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        :root {
+            --color-bg:        #0f0f1a;
+            --color-text:      #f0f0ff;
+            --color-accent:    #e94560;
+            --color-card:      #1a1a2e;
+            --radius:          16px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #797ab0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            min-height: 100vh;
+            padding: 4rem 1rem 5rem;
+            text-align: center;
         }
+          header {
+            margin-bottom: 6rem;
+        }
+        h1{
+            font-size: clamp(3.2rem, 11vw, 7rem);
+            color: var(--color-accent);
+            margin-bottom: 0.8rem;
+            text-shadow: 0 4px 15px rgba(233,69,96,0.3);
+            }
+
         .main-content-box {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 1400px;
-            margin: 20px auto;
-            color: white;
-            font-weight: bold;
-            text-align: left;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
+            background: var(--color-card);
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
         ul {
             text-align: left;
             list-style-position: inside;
@@ -40,7 +53,7 @@
     </style>
 </head>
 <body>
-    <h1>Theatergetöse 🎭</h1>
+    <h1>Über mich</h1>
     <div class="main-content-box">
         <a>Theatergethöse steht für ein vielseitiges Programm voller Energie und Ideenreichtum. Ob besondere Shows oder kreative Stunden - hier wird Spontanität zum Erlerbnis
         Perfekt geignet für:
